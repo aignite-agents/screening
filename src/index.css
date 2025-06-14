@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-demont-orange text-white px-6 py-3 rounded-md font-medium transition-all duration-200 hover:bg-orange-600 hover:shadow-lg transform hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-600 text-white px-6 py-3 rounded-md font-medium transition-all duration-200 hover:bg-gray-700 hover:shadow-lg transform hover:-translate-y-0.5;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .dropdown-menu {
+    @apply absolute top-full left-0 bg-white shadow-lg rounded-md py-2 opacity-0 invisible transition-all duration-200;
+  }
+
+  .dropdown-menu.active {
+    @apply opacity-100 visible;
+  }
+
+  /* Page Boundary System */
+  .page-container {
+    @apply flex justify-center;
+  }
+  
+  .page-content {
+    @apply w-[1440px] px-4;
+  }
+  
+  /* Development Guidelines - Remove in production */
+  .page-boundaries {
+    position: relative;
+  }
+  
+  .page-boundaries::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-left: 2px dashed rgba(236, 162, 45, 0.3);
+    border-right: 2px dashed rgba(236, 162, 45, 0.3);
+    pointer-events: none;
+    z-index: 9999;
+  }
+}
