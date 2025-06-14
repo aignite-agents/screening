@@ -149,7 +149,7 @@ function App() {
           transition: transform 0.3s ease-in-out;
         }
       `}</style>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white overflow-x-hidden">
       <Header />
       
       <section className="page-container page-boundaries relative w-full h-[600px] bg-white overflow-hidden" style={{marginTop: 0, paddingTop: 0}}>
@@ -232,10 +232,10 @@ function App() {
       </section>
 
       <section className="pt-0 pb-2 bg-white page-container page-boundaries">
-        <div className="page-content px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+        <div className="page-content relative overflow-visible">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 relative">
             <div className="flex-1">
-              <div className="flex flex-col sm:flex-row gap-8 sm:gap-[100px] mb-12">
+              <div className="flex flex-col sm:flex-row gap-8 sm:gap-[100px] mb-12 pl-8">
                 <div className="flex items-start gap-4 group">
                   <div className="flex flex-col items-start transition-transform duration-300 ease-in group-hover:translate-x-2">
                     <button className="flex items-center gap-2">
@@ -258,7 +258,7 @@ function App() {
                 </div>
               </div>
 
-              <div>
+              <div className="pl-8">
                 <h2 className="mb-6 font-poppins" style={{
                   width: '439px',
                   height: '60px',
@@ -294,17 +294,17 @@ function App() {
               </div>
             </div>
 
-            <div className="relative flex flex-col items-center lg:items-end w-full lg:w-1/3">
-              <div className="absolute z-20" style={{
+            <div className="relative flex flex-col items-center lg:items-end w-full lg:w-1/3 lg:-mr-4">
+              <div className="absolute z-20 hidden lg:block" style={{
                 top: '100px',
-                right: '-16px',
+                right: '0',
                 width: '299px',
                 height: '537px'
               }}>
                 <img src="/src/assets/svg/form-background.svg" alt="Form Background" className="w-full h-full" />
               </div>
               
-              <div className="relative z-30 font-poppins" style={{width: '262px'}}>
+              <div className="relative z-30 font-poppins w-full max-w-[262px] px-4 lg:px-0">
                 <h3 className="text-[36px] font-light leading-[54px] text-left mb-1 font-poppins" style={{marginLeft: '20px'}}>
                   <span className="font-medium text-demont-orange">Talk</span> to Our
                 </h3>
@@ -342,7 +342,7 @@ function App() {
                       />
                     </div>
                   </div>
-                  <div className="pt-4" style={{marginRight: '-50px'}}>
+                  <div className="pt-4 lg:-mr-[50px] lg:-ml-[18px]">
                   <button type="button" onClick={() => setIsPopupOpen(true)} className="flex items-center gap-2 text-sm font-semibold text-white bg-demont-orange hover:bg-[#879DA5] font-poppins transition-all duration-300 ease-in-out group" style={{
                     borderTopLeftRadius: '15px',
                     borderBottomLeftRadius: '15px',
@@ -379,8 +379,8 @@ function App() {
           </h2>
           
           <div className="flex flex-col max-w-6xl gap-8 md:gap-12 mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-24">
-              <div className="flex flex-col items-start w-full max-w-sm">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-24 gap-y-8 lg:gap-y-12 items-start">
+              <div className="flex flex-col items-start w-full">
                 <div className="relative flex items-center gap-6">
                   <div style={{
                     width: '130px',
@@ -421,7 +421,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="flex flex-col items-start" style={{width: '300px'}}>
+              <div className="flex flex-col items-start w-full max-w-sm h-auto">
                 <div className="flex items-center gap-6">
                   <div style={{
                     width: '130px',
@@ -453,7 +453,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="flex flex-col items-start" style={{width: '300px'}}>
+              <div className="flex flex-col items-start w-full">
                 <div className="flex items-center gap-6">
                   <div style={{
                     width: '130px',
@@ -484,10 +484,7 @@ function App() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="flex items-center justify-start gap-24" style={{alignItems: 'flex-start'}}>
-              <div className="flex flex-col items-start" style={{width: '300px'}}>
+              <div className="flex flex-col items-start w-full">
                 <div className="flex items-center gap-6">
                   <div style={{
                     width: '130px',
@@ -605,7 +602,7 @@ function App() {
           </div>
           <div className="relative z-10 h-full">
             <div className="flex h-full gap-12">
-              <div className="relative flex-1">
+              <div className="relative flex-1 pl-8">
               <h2 className="relative z-10 font-poppins" style={{
                 width: '467px',
                 height: '60px',
@@ -728,6 +725,7 @@ function App() {
 
       <section className="relative py-20 page-container page-boundaries" style={{backgroundColor: '#0C2D46'}}>
         <div className="page-content">
+          <div className="pl-8">
           <h2 className="font-poppins" style={{
             width: '600px',
             height: '60px',
@@ -757,11 +755,13 @@ function App() {
             The Higher National Diploma International (HND) in Computing with a specialization in Software Engineering is designed for a diverse range of individuals who are interested in pursuing a career in the field of software development. This program caters to various backgrounds and aspirations, making it suitable for High School Graduates, Tech Enthusiasts, and IT Professionals etc.
             </p>
           </div>
+          </div>
         </div>
       </section>
 
       <section className="relative pt-20 pb-10 bg-white page-container page-boundaries">
         <div className="page-content">
+          <div className="pl-8">
           <h2 className="font-poppins" style={{
             width: '600px',
             height: '60px',
@@ -1138,11 +1138,13 @@ function App() {
               </ul>
             </div>
           </div>
+          </div>
         </div>
       </section>
 
       <section className="relative py-20 bg-white page-container page-boundaries">
         <div className="page-content">
+          <div className="pl-8">
           <h2 className="font-poppins" style={{
             width: '600px',
             height: '60px',
@@ -1578,6 +1580,7 @@ function App() {
               </svg>
             </div>
           </button>
+          </div>
         </div>
       </section>
 
@@ -1646,14 +1649,7 @@ function App() {
                     A leading global organization focused on enhancing management and leadership capabilities through accreditation, qualifications, and resources.
                   </p>
                   
-                  <div style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: 'calc(100% + 50px)',
-                    marginLeft: '-25px',
-                    marginRight: '-25px',
-                    marginTop: '30px'
-                  }}>
+                  <div className="flex justify-between mt-[30px] lg:w-[calc(100%+50px)] lg:-ml-[25px] lg:-mr-[25px]">
                     <button style={{
                       backgroundColor: 'white',
                       color: '#0C2D46',

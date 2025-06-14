@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="py-16 page-content" style={{ paddingLeft: '2rem', paddingRight: '2rem' }}>
         <div className="grid md:grid-cols-4" style={{ gap: '64px 0px', columnGap: '0px' }}>
           <div style={{ marginRight: '80px' }}>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-12">
               <div>
                 <img src="/footer-logo.png" alt="DEMONT Institute" style={{ width: '282px', height: '87px' }} />
               </div>
@@ -47,7 +47,7 @@ const Footer = () => {
                 800 33 666 8
               </p>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mt-8">
               <a href="#" className="flex items-center justify-center transition-colors rounded-full hover:bg-demont-orange group" style={{ width: '37px', height: '37px' }}>
                 <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M36.9974 18.5006C36.9974 27.8443 30.0716 35.5689 21.0743 36.8224C20.2331 36.9391 19.3724 37 18.4987 37C17.4902 37 16.4999 36.9196 15.5355 36.7641C6.72751 35.3459 0 27.7082 0 18.5006C0 8.28329 8.283 0 18.5 0C28.717 0 37 8.28329 37 18.5006H36.9974Z" fill="white" className="group-hover:fill-[#ECA22D] transition-colors"/>
